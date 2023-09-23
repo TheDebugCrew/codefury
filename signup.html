@@ -141,7 +141,7 @@ label{
           </div>
           <button type="button" id="login" name="login" class="btn btn-success">Login</button>
         </div><!-- end col -->
-        
+        <button type="button" id="logout" name="logout" class="btn">Logout</button>
         </div><!--  end row -->		
         </form>
       </div>
@@ -238,10 +238,9 @@ label{
 		    const user = userCredential.user;
 		    console.log(user);
 		    alert(user.email+" Login successfully!!!");
-		    document.getElementById('logout').style.display = 'block';
-		    // ...
-        window.location.href = "/dashboard.html"; // Replace with the actual URL of your dashboard page
+        window.location.href = "/dashboard.html";
 
+		    document.getElementById('logout').style.display = 'block';
 		  })
 		  .catch((error) => {
 		    const errorCode = error.code;
