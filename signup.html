@@ -143,6 +143,7 @@
             </div>
             <button type="button" id="login" name="login" class="btn btn-success">Login</button>
           </div><!-- end col -->
+          <button type="button" id="logout" name="logout" class="btn btn-success">Logout</button>
 
           </div><!--  end row -->
         </form>
@@ -208,6 +209,15 @@
   console.log(app);
 
 
+/*
+  // Check if the user is already logged in
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in, redirect to the dashboard
+    window.location.href = "dashboard.html"; // Replace with your actual dashboard page URL
+  }
+});
+*/
 
   //----- New Registration code start	  
   document.getElementById("register").addEventListener("click", function () {
@@ -219,7 +229,7 @@
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        alert("Registration successfully!!");
+        alert("Registration successful!!,Please Login Now.");
         // ...
       })
       .catch((error) => {
@@ -243,6 +253,8 @@
         const user = userCredential.user;
         console.log(user);
         alert(user.email + " Login successfully!!!");
+        window.location.href = "/dashboard.html"; 
+
         document.getElementById('logout').style.display = 'block';
         // ...
       })
@@ -271,6 +283,7 @@
 </script>
 
 </html>
+
 <!--<!DOCTYPE html>
 <html>
 <head>

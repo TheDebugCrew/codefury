@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+
+    .card {
+            height: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            width: 27%;
+            border-radius: 5px;
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transform: scale(1.05);
+    }
+    
+    .container{
+        display: flex;
+        justify-content: space-around;
+        height: 50vh;
+    }
+    .container a{
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: bold;
+        color: var(--dark-blue);
+        -webkit-text-stroke: 0.35px white;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          
+          <a href="index.html" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+  
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="index.html" id="home">home</a> 
+              </li>
+    
+              <li>
+                <a href="about.html" id="al">about</a>
+              </li>
+    
+              <li>
+                <a href="game.html" id="ss">game</a>
+              </li>
+    
+              <li>
+                <a href="help.html" id="ct">help</a>
+              </li>
+              
+            </ul>
+          </nav>
+          </div>
+        </header>
+
+
+    <main>
+
+        <h1>Relax Yourself By Playing Some Awesome Games</h1>
+    
+        <div class="container">
+            <a href="quizgame.html" class="card" style="background: url(/assets/Images/games-Images/Quiz-image.jpg) no-repeat center center/ cover;">
+                <div >
+                    Quiz Game
+                </div>
+            </a>
+            <a class="card" href="breathegame.html" style="background: url(/assets/Images/games-Images/breathe-image.jpg) no-repeat center center/ cover;">
+                <div >
+                    Breathing Exercise
+                </div>
+            </a>
+            <a class="card" href="colorgame.html" style="background: url(/assets/Images/games-Images/colour-match-image.jpg) no-repeat center center/ cover;">
+                <div >
+                    Colour Match
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Debug Mental Health</p>
+        <div>
+          <h4>Connect with creators</h4>
+          <div class="creaters">
+            <a href="https://www.linkedin.com/in/supradeep-revuru/" target="_blank">
+              Supradeep R
+            </a>
+            <a href="https://www.linkedin.com/in/sai-uttej-r/" target="_blank">
+              SaiUttej R
+            </a>
+            <a href="https://www.linkedin.com/in/akshay-rairao/" target="_blank">
+              Akshay Rairao
+              
+            </a>
+            <a href="https://www.linkedin.com/in/saketh-valakatla-a9194122b/" target="_blank">
+              Saketh Valakatla
+            </a>
+          </div>
+        </div>
+    </footer>
+
+</body>
+</html>
