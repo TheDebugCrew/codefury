@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Mental Debug Dashboard</title>
     <link rel="stylesheet" href="css/style.css"> 
+    <style>
+      .card {
+        height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  width: 27%;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+h2{
+  -webkit-text-stroke: 0.4px white;
+}
+    </style>
 </head>
 <body>
   <header>
@@ -42,12 +60,12 @@
                 <p>Hello, <span id="user-display-name"></span>!</p>
                 <a href="logout.html">Logout</a> 
             </div>
-        <section class="progress">
+        <section class="progress card" style="background: url(/assets/Images/learn.jpg) no-repeat center center/ cover;">
                 <div>
                     <h2>Learn About Mental Health</h2>
                 </div>
         </section>
-        <section class="challenges">
+        <section class="challenges card" style="background: url(/assets/Images/challenge.jpg) no-repeat center center/ cover;">
             <div>
                 <h2>Take Detox Challenges</h2>
                 <!-- detox challenges -->
@@ -56,7 +74,7 @@
                 </ul>
             </div>
         </section>
-        <section class="badges">
+        <section class="badges card" style="background: url(/assets/Images/help.jpg) no-repeat center center/ cover;">
             <h2>Need Help</h2>
         </section>
     </main>
