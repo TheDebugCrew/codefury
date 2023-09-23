@@ -101,11 +101,11 @@ section.cta-section div a{
   text-decoration: none;
   padding: 1em 2.5em;
   border-radius: 2em;
+  transition: all 1s ease;
 }
 section.cta-section div a:hover{
   background-color: var(--gold-color);
   box-shadow: 0 0 30px var(--gold-color);
-  transition: all 1s ease;
 }
 
 footer{

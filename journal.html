@@ -7,6 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Setup | Debug Mental Health</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .container{
+        height: 70vh;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1{
+        color: var(--gold-color);
+        margin-block: 1em;
+      }
+      form p{
+        margin-block: 1em;
+      }
+      form button{
+        background-color: var(--dark-blue);
+        color: white;
+        padding: 1em 2.5em;
+        border-radius: 2em;
+        transition: all 1s ease;
+        border: none;
+      }
+      form button:hover{
+        background-color: var(--gold-color);
+       box-shadow: 0 0 30px var(--gold-color);
+      }
+    </style>
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"></script>
@@ -23,7 +52,7 @@
       <div class="navbar">
         <ul>
           <li>
-            <a href="index.html" id="home" style="color: var(--gold);">Home</a> 
+            <a href="index.html" id="home" >Home</a> 
           </li>
 
           <li>
@@ -31,30 +60,39 @@
           </li>
 
           <li>
-            <a href="game.html" id="ss">Game</a>
+            <a href="audio.html" id="ss">Relax</a>
           </li>
 
           <li>
-            <a href="help.html" id="ct">Help</a>
+            <a href="help.html" id="ct">Support</a>
           </li>
           <li>
-            <a href="awareness.html">More Awareness</a>
+            <a href="awareness.html">Awareness</a>
           </li>
           
         </ul>
       </nav>
       </div>
     </header>
+
     <div class="container">
+      <h1>Create Journal</h1>
       <form id="journal-entry-form">
+      <p>
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required /><br>
-      
+      </p>
+
+      <p>
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required /><br>
-      
+      </p>
+        
+      <p>
         <label for="content">Content:</label>
         <textarea id="content" name="content" rows="4" required></textarea><br>
+      </p>
+        
       
         <button type="submit">Save Entry</button>
       </form>
