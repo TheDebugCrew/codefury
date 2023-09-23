@@ -198,7 +198,7 @@
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        alert("Registration successfully!!");
+        alert("Registration successful!!,Please Login Now.");
         // ...
       })
       .catch((error) => {
@@ -210,6 +210,15 @@
       });
   });
   //----- End
+  const auth = firebase.auth(); // Get the Firebase Auth object
+
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in, redirect to the dashboard
+    window.location.href = "/dashboard.html"; // Replace with your actual dashboard page URL
+  }
+});
+
 
   //----- Login code start	  
   document.getElementById("login").addEventListener("click", function () {
