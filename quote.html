@@ -87,6 +87,18 @@
 
       // Call the function to display a random quote on page load
       displayRandomQuote();
+      let quote;
+      fetch("https://api.quotable.io/random")
+        .then((response) => response.json())
+        .then((data) => {
+          Notification.requestPermission().then((perm) => {
+            if (perm === "granted") {
+              const notification = new Notification("Quote of the Day", {
+                body: data.content,
+              });
+            }
+          });
+        });
     </script>
 
     <p>Check back tomorrow for a new inspirational quote!</p>
