@@ -118,7 +118,6 @@
 
             <div class="form-group">
               <label for="password">Password</label>
-<<<<<<< HEAD
               <input type="password" name="login_password" id="login_password" class="form-control"
                 placeholder="Enter your password">
             </div>
@@ -126,14 +125,6 @@
           </div><!-- end col -->
 
           </div><!--  end row -->
-=======
-            <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
-          </div>
-          <button type="button" id="login" name="login" class="btn btn-success">Login</button>
-        </div><!-- end col -->
-        <button type="button" id="logout" name="logout" class="btn">Logout</button>
-        </div><!--  end row -->		
->>>>>>> a8432aef17dbb49454589c6b3afdd70b0028f6ab
         </form>
       </div>
 
@@ -196,34 +187,8 @@
   const auth = getAuth();
   console.log(app);
 
-<<<<<<< HEAD
-=======
-	  //----- New Registration code start	  
-	  document.getElementById("register").addEventListener("click", function() {
-		  var email =  document.getElementById("email").value;
-		  var password = document.getElementById("password").value;
-		  //For new registration
-		  createUserWithEmailAndPassword(auth, email, password)
-		  .then((userCredential) => {
-		    // Signed in 
-		    const user = userCredential.user;
-		    console.log(user);
-		    alert("Registration successful!!,Please Login Now");
-		    // ...
-		  })
-		  .catch((error) => {
-		    const errorCode = error.code;
-		    const errorMessage = error.message;
-		    // ..
-		    console.log(errorMessage);
-		    alert(error);
-		  });		  		  
-	  });
-	  //----- End
->>>>>>> a8432aef17dbb49454589c6b3afdd70b0028f6ab
 
 
-<<<<<<< HEAD
   //----- New Registration code start	  
   document.getElementById("register").addEventListener("click", function () {
     var email = document.getElementById("email").value;
@@ -246,26 +211,6 @@
       });
   });
   //----- End
-=======
-		  signInWithEmailAndPassword(auth, email, password)
-		  .then((userCredential) => {
-		    // Signed in 
-		    const user = userCredential.user;
-		    console.log(user);
-		    alert(user.email+" Login successfully!!!");
-        window.location.href = "/dashboard.html";
-
-		    document.getElementById('logout').style.display = 'block';
-		  })
-		  .catch((error) => {
-		    const errorCode = error.code;
-		    const errorMessage = error.message;
-		    console.log(errorMessage);
-		    alert(errorMessage);
-		  });		  		  
-	  });
-	  //----- End
->>>>>>> a8432aef17dbb49454589c6b3afdd70b0028f6ab
 
   //----- Login code start	  
   document.getElementById("login").addEventListener("click", function () {
