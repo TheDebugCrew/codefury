@@ -136,4 +136,42 @@ h2{
   </footer>
 
 </body>
+
+<script>
+
+  // Check if the user is authenticated
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in
+    const userId = user.uid;
+
+    // Reference to the user's data in Realtime Database
+    const userRef = firebase.database().ref("users/" + userId);
+
+    // Fetch user data
+    userRef.once("value")
+      .then(function(snapshot) {
+        // Get user data
+        const userData = snapshot.val();
+
+        // Update your dashboard with user data
+        displayUserData(userData);
+      })
+      .catch(function(error) {
+        console.error("Error fetching user data:", error);
+      });
+  } else {
+    // User is not signed in, handle accordingly
+    console.log("User is not signed in.");
+  }
+});
+
+// Function to display user data on the dashboard
+function displayUserData(userData) {
+  // Use userData to update the content of your dashboard elements
+  // For example, update profile information, display user's posts, etc.
+  // You can access specific fields like userData.name, userData.email, etc.
+}
+
+</script>
 </html>
