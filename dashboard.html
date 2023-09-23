@@ -3,29 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Digital Detox Buddy</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Your Mental Debug Dashboard</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
-        <h1>Welcome to Your Dashboard</h1>
-        <p>Track your screen time and take on challenges to detox digitally.</p>
+        <h1>Welcome to Your Mental Debug Dashboard</h1>
+        <p>Hello, <span id="user-display-name"></span>!</p>
+        <a href="logout.html">Logout</a> <!-- Create a logout page -->
     </header>
-    
-    <section class="user-info">
-        <h2>Hello, [Username]!</h2>
-        <p>Total Screen Time Today: [X] hours</p>
-        <p>Weekly Challenge Progress: [Y]/[Total Challenges]</p>
-    </section>
-
-    <section class="actions">
-        <h2>What would you like to do today?</h2>
-        <a href="screen-time.html" class="btn btn-primary">Log Screen Time</a>
-        <a href="challenges.html" class="btn btn-secondary">Take on Challenges</a>
-    </section>
-
+    <main>
+        <section class="progress">
+            <h2>Your Progress</h2>
+            <!-- Display user's progress information here -->
+        </section>
+        <section class="challenges">
+            <h2>Take a Detox Challenge</h2>
+            <!-- Display available detox challenges with descriptions -->
+            <ul id="challenge-list">
+                <!-- Challenges will be dynamically added here using JavaScript -->
+            </ul>
+        </section>
+        <section class="badges">
+            <h2>Your Badges</h2>
+            <!-- Display user's earned badges here -->
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2023 Digital Detox Buddy</p>
+        <p>&copy; 2023 Debug Mental Health</p>
+        <div>
+          <h4>Connect with creators</h4>
+          <a href="https://www.linkedin.com/in/" target="_blank">SaiUttejR</a><!--I will add links at the end-->
+          <a href="https://www.linkedin.com/in/" target="_blank">Supradeep R</a>
+          <a href="https://www.linkedin.com/in/" target="_blank">Saketh Valakatla</a>
+          <a href="https://www.linkedin.com/in/" target="_blank">Akshay Rairao</a>
+        </div>
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+    <script src="script/dashboard.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCFljAhRbARZU1GztY06fXfT_CxpsAANBU",
+          authDomain: "debugmentalhealth-tdc.firebaseapp.com",
+          projectId: "debugmentalhealth-tdc",
+          storageBucket: "debugmentalhealth-tdc.appspot.com",
+          messagingSenderId: "76396786959",
+          appId: "1:76396786959:web:317d06453a7d22d12e7a7a",
+          measurementId: "G-TZX3XFSX15"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 </body>
 </html>
