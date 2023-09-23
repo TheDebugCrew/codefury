@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Quiz Game</title>
+    <link rel="stylesheet" href="/css/hAndfStyle.css">
     <style>
         /* Game-like CSS styles */
         body {
@@ -13,8 +14,8 @@
             padding: 0;
             color: #fff;
         }
-        header {
-            background-color: #333;
+        .heading {
+            background-color: var(--gold-color);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -67,8 +68,38 @@
 </head>
 <body>
     <header>
+        <nav>
+          
+          <a href="index.html" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+  
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="index.html" id="home" style="color: var(--gold);">Home</a> 
+              </li>
+    
+              <li>
+                <a href="about.html" id="al">About</a>
+              </li>
+    
+              <li>
+                <a href="game.html" id="ss">Game</a>
+              </li>
+    
+              <li>
+                <a href="help.html" id="ct">Help</a>
+              </li>
+              <li>
+                <a href="awareness.html">More Awareness</a>
+              </li>
+              
+            </ul>
+          </nav>
+          </div>
+        </header>
+    <div class="heading">
         <h1>Mental Health Quiz Game</h1>
-    </header>
+    </heading>
     <div class="container">
         <h2>Depression Awareness Quiz</h2>
         <p>Test your knowledge about depression and raise awareness about mental health:</p>
@@ -127,6 +158,7 @@
         <button id="quiz-submit">Submit Answers</button>
         <div id="quiz-results"></div>
     </div>
+    
 
     <script>
         document.getElementById("quiz-submit").addEventListener("click", calculateResults);
@@ -169,5 +201,26 @@
         }
     </script>
     
+    <footer>
+        <p>&copy; 2023 Debug Mental Health</p>
+        <div>
+          <h4>Connect with creators</h4>
+          <div class="creaters">
+            <a href="https://www.linkedin.com/in/supradeep-revuru/" target="_blank">
+              Supradeep R
+            </a>
+            <a href="https://www.linkedin.com/in/sai-uttej-r/" target="_blank">
+              SaiUttej R
+            </a>
+            <a href="https://www.linkedin.com/in/akshay-rairao/" target="_blank">
+              Akshay Rairao
+              
+            </a>
+            <a href="https://www.linkedin.com/in/saketh-valakatla-a9194122b/" target="_blank">
+              Saketh Valakatla
+            </a>
+          </div>
+        </div>
+    </footer>
 </body>
 </html>
