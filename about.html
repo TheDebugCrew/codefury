@@ -2,59 +2,198 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <style>
-    a {text-decoration: none;}   
-    </style>
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Mental Health</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Variables */
+:root{
+    --gold-color: #FFC436;
+    --dark-blue: #191D88;
+    --medium-blue: #1450A3;
+    --pale-sky-blue: #337CCF;
+}
+        /* Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+}
+nav img {
+    width: 200px;
+    margin-left: 2rem; 
+}
+header a{
+    text-decoration: none;
+    color: inherit;
+}
+nav li {
+    padding: 0em 0.5em;
+}
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-flow: unset;
+    justify-content: space-evenly;
+}
+/* Navbar */
+.navbar {
+    margin-right: 2rem;
+    height: fit-content;
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--dark-blue);
+    justify-content: space-around;
+}
+.navbar li:hover{
+    color:var(--gold-color);
+    text-shadow: 0 0 30px var(--gold-color);
+    transition: all 1s ease;
+}
+        a {text-decoration: none;}  
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
-        header {
+        .heading {
             background-color: #007bff;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-        .container {
+        .for-more{
+  background-color: var(--dark-blue);
+  color: white;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  border: none;
+}
+
+.for-more:hover{
+  background-color: var(--gold-color);
+  box-shadow: 0 0 30px var(--gold-color);
+  transition: all 1s ease;
+}
+        .wrapper {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
+        footer{
+  min-height: 40vh;
+  background-color: var(--dark-blue);
+  text-align: center;
+  padding: 2em;
+  color: white;
+}
+footer div{
+  margin-top: 3em;
+}
+footer div h4{
+  text-decoration: underline;
+}
+
+footer div a{
+  text-decoration: none;
+  color: white;
+  margin-inline: 1em;
+}
+footer div a:hover{
+  color: var(--gold-color);
+}
+
+
     </style>
 </head>
 <body>
     <header>
+        <nav>
+          
+          <a href="" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+  
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="" id="home">home</a> 
+              </li>
+    
+              <li>
+                <a href="about.html" id="al">about</a>
+              </li>
+    
+              <li>
+                <a href="" id="ss">game</a>
+              </li>
+    
+              <li>
+                <a href="help.html" id="ct">help</a>
+              </li>
+              
+            </ul>
+          </nav>
+          </div>
+        </header>
+  
+    <div class="heading">
         <h1>About Mental Health</h1>
-    </header>
-    <div class="container">
-        <h2>Mental Health Matters</h2>
+    </div>
+    <div class="wrapper">
+        <h2>Mental Health Matters &colon;</h2>
         <p>Mental health is a vital component of overall well-being. It encompasses emotional, psychological, and social well-being. Good mental health enables you to cope with stress, form meaningful relationships, and make decisions that enrich your life.</p>
 
-        <h2>Understanding Mental Health</h2>
+        <h2>Understanding Mental Health &colon;</h2>
         <p>Mental health conditions can affect anyone, regardless of age, gender, or background. Common mental health issues include depression, anxiety, and stress-related disorders. It's essential to recognize the signs and seek help when needed.</p>
 
-        <h2>Precautions and Tips</h2>
+        <h2>Precautions and Tips &colon;</h2>
         <ul>
-            <li>**Prioritize Self-Care**: Dedicate time to activities that bring you joy and relaxation.</li>
-            <li>**Stay Connected**: Foster supportive relationships with friends and family members.</li>
-            <li>**Manage Stress**: Practice stress-reduction techniques such as mindfulness, yoga, or meditation.</li>
-            <li>**Healthy Lifestyle**: Maintain a balanced diet, engage in regular physical activity, and ensure sufficient sleep.</li>
-            <li>**Seek Professional Help**: If you're struggling with your mental health, don't hesitate to consult a mental health professional or therapist.</li>
-            <a href="./help.html">for more</a>
+            <li><b>Prioritize Self-Care &colon;</b> Dedicate time to activities that bring you joy and relaxation.</li>
+            <li><b>Stay Connected &colon;</b> Foster supportive relationships with friends and family members.</li>
+            <li><b>Manage Stress &colon;</b> Practice stress-reduction techniques such as mindfulness, yoga, or meditation.</li>
+            <li><b>Healthy Lifestyle &colon;</b> Maintain a balanced diet, engage in regular physical activity, and ensure sufficient sleep.</li>
+            <li><b>Seek Professional Help &colon;</b> If you're struggling with your mental health, don't hesitate to consult a mental health professional or therapist.</li>
         </ul>
+        <button class="for-more" href="./help.html">For more information</button>
 
-        <h2>Breaking the Stigma</h2>
+        <h2>Breaking the Stigma &colon;</h2>
         <p>One of our goals at Mental Health is to break the stigma surrounding mental health issues. We believe in open conversations, awareness, and support for individuals facing mental health challenges. It's okay to seek help, and you're not alone in your journey to better mental health.</p>
 
-        <h2>Resources</h2>
+        <h2>Resources &colon;</h2>
         <p>For more information, resources, and support, please explore our website. We offer articles, guides, and resources to help you on your path to improved mental well-being.</p>
     </div>
 </body>
+<footer>
+    <p>&copy; 2023 Debug Mental Health</p>
+    <div>
+      <h4>Connect with creators</h4>
+      <div class="creaters">
+        <a href="https://www.linkedin.com/in/supradeep-revuru/" target="_blank">
+          Supradeep R
+        </a>
+        <a href="https://www.linkedin.com/in/sai-uttej-r/" target="_blank">
+          SaiUttej R
+        </a>
+        <a href="https://www.linkedin.com/in/akshay-rairao/" target="_blank">
+          Akshay Rairao
+          
+        </a>
+        <a href="https://www.linkedin.com/in/saketh-valakatla-a9194122b/" target="_blank">
+          Saketh Valakatla
+        </a>
+      </div>
+    </div>
+</footer>
 </html>
