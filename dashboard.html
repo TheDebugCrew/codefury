@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Mental Debug Dashboard</title>
     <link rel="stylesheet" href="css/style.css"> 
+    <style>
+      .activities{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60vh;
+      }
+
+      section.card {
+        height: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  width: 27%;
+  border-radius: 5px;
+}
+main div p{
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+h2{
+  -webkit-text-stroke: 0.4px white;
+}
+
+.logout{
+  background-color: var(--dark-blue);
+  color: white;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  border: none;
+  font-size: bold;
+}
+
+.logout:hover{
+  background-color: var(--gold-color);
+  box-shadow: 0 0 30px var(--gold-color);
+  transition: all 1s ease;
+}
+    </style>
 </head>
 <body>
   <header>
@@ -40,35 +85,48 @@
             <div>
                 <h1>Welcome to Your Mental Debug Dashboard</h1>
                 <p>Hello, <span id="user-display-name"></span>!</p>
-                <a href="logout.html">Logout</a> 
+                 
             </div>
-        <section class="progress">
-                <div>
-                    <h2>Learn About Mental Health</h2>
-                </div>
-        </section>
-        <section class="challenges">
-            <div>
-                <h2>Take Detox Challenges</h2>
-                <!-- detox challenges -->
-                <ul id="challenge-list">
-                    <!-- Challenges will be added  -->
-                </ul>
+            <div class="activities">
+
+              <section class="progress card" style="background: url(/assets/Images/learn.jpg) no-repeat center center/ cover;">
+                      <div>
+                          <h2>Learn About Mental Health</h2>
+                      </div>
+              </section>
+              <section class="challenges card" style="background: url(/assets/Images/challenge.jpg) no-repeat center center/ cover;">
+                  <div>
+                      <h2>Take Detox Challenges</h2>
+                      <!-- detox challenges -->
+                      
+                  </div>
+              </section>
+              <section class="badges card" style="background: url(/assets/Images/help.jpg) no-repeat center center/ cover;">
+                  <h2>Need Help</h2>
+              </section>
             </div>
-        </section>
-        <section class="badges">
-            <h2>Need Help</h2>
-        </section>
+            <button class="logout" href="logout.html">Logout</button>
     </main>
     <footer>
-        <p>&copy; 2023 Debug Mental Health</p>
-        <div>
-          <h4>Connect with creators</h4>
-          <a href="https://www.linkedin.com/in/" target="_blank">SaiUttejR</a><!--I will add links at the end-->
-          <a href="https://www.linkedin.com/in/" target="_blank">Supradeep R</a>
-          <a href="https://www.linkedin.com/in/" target="_blank">Saketh Valakatla</a>
-          <a href="https://www.linkedin.com/in/" target="_blank">Akshay Rairao</a>
+      <p>&copy; 2023 Debug Mental Health</p>
+      <div>
+        <h4>Connect with creators</h4>
+        <div class="creaters">
+          <a href="https://www.linkedin.com/in/supradeep-revuru/" target="_blank">
+            Supradeep R
+          </a>
+          <a href="https://www.linkedin.com/in/sai-uttej-r/" target="_blank">
+            SaiUttej R
+          </a>
+          <a href="https://www.linkedin.com/in/akshay-rairao/" target="_blank">
+            Akshay Rairao
+            
+          </a>
+          <a href="https://www.linkedin.com/in/saketh-valakatla-a9194122b/" target="_blank">
+            Saketh Valakatla
+          </a>
         </div>
-    </footer>
+      </div>
+  </footer>
 </body>
 </html>
