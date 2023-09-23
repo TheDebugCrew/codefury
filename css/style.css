@@ -29,7 +29,6 @@ nav {
 }
 nav img {
     width: 200px;
-    /* margin-top: 1.5rem;*/
     margin-left: 2rem; 
 }
 header a{
@@ -37,7 +36,6 @@ header a{
     color: inherit;
 }
 nav li {
-    display: inline-block;
     padding: 0em 0.5em;
 }
   
@@ -46,6 +44,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     flex-flow: unset;
+    justify-content: space-evenly;
 }
 /* Navbar */
 .navbar {
@@ -64,7 +63,6 @@ nav ul {
     text-shadow: 0 0 30px var(--gold-color);
     transition: all 1s ease;
 }
-
 /* Main section */
 main{
   text-align: center;
@@ -76,7 +74,6 @@ main h1{
   padding: 1.5em;
   color: var(--gold-color);
   -webkit-text-stroke: 0.4px navy;
-  text-stroke: 0.4px navy;
 }
 
 section.cta-section{
@@ -85,6 +82,7 @@ section.cta-section{
 }
 
 section.cta-section h2{
+  -webkit-text-stroke: 0.4px black;
   font-size: 1.8em;
 }
 
@@ -132,3 +130,7 @@ footer div a{
 footer div a:hover{
   color: var(--gold-color);
 }
+
+
+
+/* For signup page */
