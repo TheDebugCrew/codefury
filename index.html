@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debug Mental Health by The Debug Crew</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -15,11 +15,36 @@
         <section class="cta-section">
             <h2>Ready to take a break?</h2>
             <p>Join us in the journey to a healthier digital life.</p>
-            <a href="signup.html" class="btn">Get Started</a> <!-- Link to the registration page -->
+            <a href="signup.html" class="btn">Get Started</a>
         </section>
     </main>
     <footer>
         <p>&copy; 2023 Debug Mental Health</p>
     </footer>
+
+    <!--Firebase tags(dont alter this ,even for css)-->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBr51fQzzJ69b2NZAIg-YHiSIj1sOMhoMo",
+        authDomain: "codefury-the-debug-crew.firebaseapp.com",
+        projectId: "codefury-the-debug-crew",
+        storageBucket: "codefury-the-debug-crew.appspot.com",
+        messagingSenderId: "537691937876",
+        appId: "1:537691937876:web:76c86a850ebf87f05a61c1",
+        measurementId: "G-G03F2HPT7S"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
