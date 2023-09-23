@@ -218,6 +218,15 @@
     var email = document.getElementById("login_email").value;
     var password = document.getElementById("login_password").value;
 
+
+    // Check if the user is already logged in
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in, redirect to the dashboard
+    window.location.href = "/dashboard.html"; 
+  }
+});
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
@@ -254,6 +263,8 @@
 </script>
 
 </html>
+
+
 <!--<!DOCTYPE html>
 <html>
 <head>
