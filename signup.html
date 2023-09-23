@@ -123,8 +123,6 @@
             </div>
             <button type="button" id="login" name="login" class="btn btn-success">Login</button>
           </div><!-- end col -->
-          <button type="button" id="logout" name="logout" class="btn btn-success">Logout</button>
-
           </div><!--  end row -->
         </form>
       </div>
@@ -226,7 +224,7 @@
         alert(user.email + " Login successfully!!!");
         window.location.href = "/dashboard.html"; 
 
-        document.getElementById('logout').style.display = 'block';
+        //document.getElementById('logout').style.display = 'block';
         // ...
       })
       .catch((error) => {
