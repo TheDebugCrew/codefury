@@ -5,17 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debug Mental Health by The Debug Crew</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
 </head>
 <body>
     <header>
         <h1>Welcome to Debug Mental Health</h1>
+        <nav>
+          <a href="" id="head1" class="dmh"></a>
+          <a href="" id="home">HOME</a> 
+          <a href="" id="al">ABOUT</a>
+          <a href="" id="ss">Game</a>
+          <a href="" id="ct">Help</a>
+        </nav>
         <p>Your companion for healthy screen habits</p>
     </header>
     <main>
         <section class="cta-section">
             <h2>Ready to take a break?</h2>
-            <p>Join us in the journey to a healthier digital life.</p>
-            <a href="signup.html" class="btn">Get Started</a>
+            <div>
+              <p>Join us in the journey to a healthier digital life.</p>
+              <a href="signup.html" class="btn">Get Started</a>
+            </div>
         </section>
     </main>
     <footer>
@@ -46,5 +56,6 @@
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
     </script>
+    <!-- Include Firebase JavaScript SDK -->
 </body>
 </html>
