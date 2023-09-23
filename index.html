@@ -34,6 +34,14 @@
             <li>
               <a href="awareness.html">Awareness</a>
             </li>
+
+            <!-- Add this code within the <header> element -->
+<button class="hamburger" id="hamburger-btn">
+  <div class="bar">.</div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</button>
+
             
           </ul>
         </nav>
@@ -78,9 +86,15 @@
           </div>
         </div>
     </footer>
-
     <script>
-
-    </script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const navbar = document.querySelector('.navbar');
+  
+      hamburgerBtn.addEventListener('click', () => {
+          hamburgerBtn.classList.toggle('active');
+          navbar.classList.toggle('active');
+      });
+  </script>
+  
 </body>
 </html>
