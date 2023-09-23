@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Quiz Game</title>
+    <style>
+        /* Game-like CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #444;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .quiz-options {
+            margin-left: 20px;
+            text-align: left;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #quiz-results {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #007bff;
+        }
+    </style>    
+</head>
+<body>
+    <header>
+        <h1>Mental Health Quiz Game</h1>
+    </header>
+    <div class="container">
+        <h2>Depression Awareness Quiz</h2>
+        <p>Test your knowledge about depression and raise awareness about mental health:</p>
+
+        <div class="quiz-question">
+            Question 1: What is one common symptom of depression?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q1" value="a">a) Persistent sadness<br>
+            <input type="radio" name="q1" value="b">b) Constant happiness<br>
+            <input type="radio" name="q1" value="c">c) Occasional laughter<br>
+        </div>
+
+        <div class="quiz-question">
+            Question 2: How can you support someone with depression?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q2" value="a">a) Listen without judgment<br>
+            <input type="radio" name="q2" value="b">b) Tell them to "snap out of it"<br>
+            <input type="radio" name="q2" value="c">c) Avoid talking to them<br>
+        </div>
+        <div class="quiz-question">
+            Question 3: What is a common symptom of anxiety?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q3" value="a">a) Rapid heartbeat<br>
+            <input type="radio" name="q3" value="b">b) Constant laughter<br>
+            <input type="radio" name="q3" value="c">c) Frequent napping<br>
+        </div>
+        
+        <div class="quiz-question">
+            Question 4: How can you promote good mental health?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q4" value="a">a) Exercise regularly<br>
+            <input type="radio" name="q4" value="b">b) Isolate yourself from others<br>
+            <input type="radio" name="q4" value="c">c) Avoid talking about your feelings<br>
+        </div>
+        <div class="quiz-question">
+            Question 5: Which of the following is a self-care activity for mental well-being?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q5" value="a">a) Eating junk food<br>
+            <input type="radio" name="q5" value="b">b) Practicing mindfulness<br>
+            <input type="radio" name="q5" value="c">c) Ignoring your emotions<br>
+        </div>
+        
+        <div class="quiz-question">
+            Question 6: What is the importance of social connections in mental health?
+        </div>
+        <div class="quiz-options">
+            <input type="radio" name="q6" value="a">a) Social connections have no impact on mental health<br>
+            <input type="radio" name="q6" value="b">b) Social connections can positively impact mental health<br>
+            <input type="radio" name="q6" value="c">c) Social connections can only negatively impact mental health<br>
+        </div>
+        <button id="quiz-submit">Submit Answers</button>
+        <div id="quiz-results"></div>
+    </div>
+
+    <script>
+        document.getElementById("quiz-submit").addEventListener("click", calculateResults);
+    
+        function calculateResults() {
+            const q1Answer = document.querySelector('input[name="q1"]:checked');
+            const q2Answers = document.querySelectorAll('input[name="q2"]:checked');
+            const q3Answer = document.querySelector('input[name="q3"]:checked');
+            const q4Answers = document.querySelectorAll('input[name="q4"]:checked');
+            const q5Answers = document.querySelectorAll('input[name="q5"]:checked');
+            const q6Answer = document.querySelector('input[name="q6"]:checked');
+            let score = 0;
+    
+            if (q1Answer && q1Answer.value === "a") {
+                score++;
+            }
+    
+            if (q2Answers.length === 1 && q2Answers[0].value === "a") {
+                score++;
+            }
+    
+            if (q3Answer && q3Answer.value === "a") {
+                score++;
+            }
+    
+            if (q4Answers.length === 1 && q4Answers[0].value === "a") {
+                score++;
+            }
+    
+            if (q5Answers.length === 1 && q5Answers[0].value === "b") {
+                score++;
+            }
+    
+            if (q6Answer && q6Answer.value === "b") {
+                score++;
+            }
+    
+            const resultsDiv = document.getElementById("quiz-results");
+            resultsDiv.innerHTML = `You scored ${score} out of 6.`;
+        }
+    </script>
+    
+</body>
+</html>
