@@ -17,32 +17,32 @@
 }
 
 body{
-    background: rgb(9,9,121);
-    background: linear-gradient(301deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: url(/assets/Images/bgImage.jpg) no-repeat center center/ cover;
+    height: 100vh;
 }
 
 /* Header */
-header {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#ffffffcc;
+    background-color:white;
 }
-header img {
+nav img {
     width: 200px;
     /* margin-top: 1.5rem;*/
     margin-left: 2rem; 
 }
-header a,  .btn a {
+header a{
     text-decoration: none;
     color: inherit;
 }
-header li {
+nav li {
     display: inline-block;
     padding: 0em 0.5em;
 }
   
-header ul {
+nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
