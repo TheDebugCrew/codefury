@@ -1,1 +1,365 @@
-<h1>Go and write the code frst!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+            :root{
+                --gold-color: #FFC436;
+                --dark-blue: #191D88;
+                --medium-blue: #1450A3;
+                --pale-sky-blue: #337CCF;
+            }
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: rgba(51, 124, 207, .5);
+                font-family: 'Poppins',sans-serif;
+            }
+            h1{
+                font-size: 300%;
+                text-align: center; 
+                margin:3% 0;
+                color: var(--gold-color);
+                -webkit-text-stroke: 0.4px navy;
+                text-stroke: 0.4px navy;
+            }
+            .main{
+                display: flex;
+                justify-content: center;
+
+            }
+            .container{
+                width: 45%;
+                margin: 5% 0;
+                min-width: 500px;
+            }
+            .wrapper{
+                background-color: #ffffff;
+                margin-bottom: 20px;
+                padding: .5rem 1.5rem;
+                border-radius: 5px;
+                box-shadow: 0 15px 25px rgba(20, 80, 163, .2);
+            }
+            .qsn,
+            .content{
+                font-family: "Poppins",sans-serif;
+            }
+            .qsn{
+                width: 100%;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                color: #111130;
+                font-weight: 500;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 15px 0;
+            }
+            .content{
+                position: relative;
+                font-size: 14px;
+                text-align: justify;
+                line-height: 30px;
+                height: 0;
+                overflow: hidden;
+                transition: all 1s;
+            }
+
+            #up {
+                display: none; 
+                position: fixed; 
+                bottom: 20px; 
+                right: 30px;
+                z-index: 99; 
+                outline: none; 
+                color: var(--gold-color); 
+                cursor: pointer; 
+                font-size: 350%; 
+            }
+            .helpline{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            
+
+    </style>
+</head>
+<body>
+    <a onclick="topFunction()" id="up" title="Go top">
+        <i class="fa-regular fa-circle-up"></i>
+    </a>
+    <header>
+        <nav>
+          
+          <a href="" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+  
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="" id="home">home</a> 
+              </li>
+    
+              <li>
+                <a href="about.html" id="al">about</a>
+              </li>
+    
+              <li>
+                <a href="" id="ss">game</a>
+              </li>
+    
+              <li>
+                <a href="" id="ct">help</a>
+              </li>
+            </ul>
+          </nav>
+          </div>
+        </header>
+
+    <h1>Get Help</h1>
+    <div class="helpline">
+        <div style="font-size:150%;">
+            <span><i class="fa-solid fa-link" style="color: #191D88"></i></span>
+            <a href="https://esanjeevani.mohfw.gov.in/#/">eSanjeevani</a>
+        </div>
+        <div style="font-size:150%;">
+            <span><i class="fa-solid fa-link" style="color: #191D88"></i></span>
+            <a href="https://www.vandrevalafoundation.com/free-counseling">Vandrevala Foundation</a>
+        </div>
+        <div style="font-size:150%;">
+            <span><i class="fa-solid fa-link" style="color: #191D88"></i></span>
+            <a href="http://www.aasra.info/helpline.html" >Aasra</a>
+        </div>
+    </div>
+    <div class="main">
+    <div class="container">
+        <div class="wrapper">
+            <button class="qsn">
+                What is mental health?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Mental health refers to your emotional, psychological, and social well-being. It encompasses how you think, feel, and behave in various situations.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What are common mental health disorders?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Common mental health disorders include depression, anxiety disorders, bipolar disorder, schizophrenia, and post-traumatic stress disorder (PTSD).</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What are the signs of depression?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Signs of depression can include persistent sadness, loss of interest in activities, changes in appetite and sleep patterns, and feelings of hopelessness.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                How can I manage stress and anxiety?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Stress and anxiety management techniques include deep breathing, exercise, mindfulness, and seeking support from friends or professionals.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What is the difference between stress and anxiety?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Stress is a response to a specific stressor, while anxiety is a prolonged state of unease and worry often without a specific cause.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                How can I support a friend or family member with a mental health issue?
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Offer your support, listen without judgment, and encourage them to seek professional help if needed.</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What is therapy, and how does it work?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Therapy is a form of mental health treatment that involves talking to a trained professional. It can help individuals understand and manage their thoughts and emotions.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                Are there effective self-help strategies for managing mental health?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Yes, self-help strategies like journaling, meditation, exercise, and setting realistic goals can be effective for managing mental health.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What is the impact of social media on mental health?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Excessive use of social media can lead to anxiety and low self-esteem. It's essential to use it mindfully and take breaks.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                How can I improve my self-esteem and body image?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Focus on self-acceptance, practice self-compassion, and challenge negative self-talk to improve self-esteem and body image.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What are the symptoms of bipolar disorder?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Symptoms include periods of depression and manic episodes with heightened mood, increased energy, and impulsivity.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                Is it normal to feel overwhelmed at times, or is it a sign of a mental health issue?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Feeling overwhelmed at times is normal, but if it becomes chronic and affects your daily life, it might indicate a mental health concern.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                What is the relationship between substance abuse and mental health?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Substance abuse can worsen mental health conditions and vice versa. It's essential to address both issues simultaneously.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                How can I promote mental health in the workplace?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Promote a supportive work environment, encourage work-life balance, and provide resources for mental health support.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <button class="qsn">
+                How can I talk to my healthcare provider about mental health concerns?
+
+
+                <i class="fas fa-plus icon"></i>
+            </button>
+            <div class="content">
+                <p>Be open and honest about your concerns, describe your symptoms, and ask for a referral to a mental health specialist if necessary. Your healthcare provider is there to help.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        let toggles = document.getElementsByClassName('qsn');
+let contentDiv = document.getElementsByClassName('content');
+let icons = document.getElementsByClassName('icon');
+let mybutton = document.getElementById("up");
+
+for(let i=0; i<toggles.length; i++){
+    toggles[i].addEventListener('click', ()=>{
+        if( parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
+            contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+            toggles[i].style.color = "#FFC436";
+            icons[i].classList.remove('fa-plus');
+            icons[i].classList.add('fa-minus');
+        }
+        else{
+            contentDiv[i].style.height = "0px";
+            toggles[i].style.color = "#111130";
+            icons[i].classList.remove('fa-minus');
+            icons[i].classList.add('fa-plus');
+        }
+
+        for(let j=0; j<contentDiv.length; j++){
+            if(j!==i){
+                contentDiv[j].style.height = "0px";
+                toggles[j].style.color = "#111130";
+                icons[j].classList.remove('fa-minus');
+                icons[j].classList.add('fa-plus');
+            }
+        }
+    });
+}
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+    </script>
+</body>
+</html>
