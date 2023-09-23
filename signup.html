@@ -212,9 +212,7 @@ label{
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    alert('user created!')
-    alert(location.href);
-            location.href = "/dashboard.html";
+    alert('user created!');
     // ...
   })
   .catch((error) => {
