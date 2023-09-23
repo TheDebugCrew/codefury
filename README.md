@@ -1,5 +1,4 @@
- ```
-# CODEFURY PROJECT
+#CODEFURY PROJECT
 
 This repository contains the project files of team The Debug Crew for CodeFury2023. Our project is a functional website related to mental health.
 
