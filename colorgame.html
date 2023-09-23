@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Matching Game</title>
+    <style>
+        /* CSS styles for the game */
+        .game-container {
+            width: 400px; /* Adjust the width as needed */
+            height: 400px; /* Match the width to create a square container */
+            margin: 0 auto; /* Center the container horizontally */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .square {
+            width: calc(25% - 10px); /* Adjust the width as needed */
+            height: calc(25% - 10px); /* Adjust the height as needed */
+            margin: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Matching Game</h1>
+    <button id="start-button">Start Game</button>
+    <p id="message"></p>
+    <div class="game-container" id="game-container"></div>
+
+    <script>
+        // JavaScript code for the game
+        const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'brown'];
+        let shuffledColors = [];
+        let selectedSquares = [];
+        let gameStarted = false;
+
+        const gameContainer = document.getElementById('game-container');
+        const startButton = document.getElementById('start-button');
+        const message = document.getElementById('message');
+
+        // Function to shuffle an array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Function to create the game board
+        function createGameBoard() {
+            gameContainer.innerHTML = '';
+            shuffledColors.forEach((color, index) => {
+                const square = document.createElement('div');
+                square.classList.add('square');
+                square.style.backgroundColor = color;
+                square.dataset.color = color; // Store the color as a data attribute
+                square.dataset.index = index; // Store the index as a data attribute
+                square.addEventListener('click', () => selectSquare(square));
+                gameContainer.appendChild(square);
+            });
+        }
+
+        // Function to handle square selection
+        function selectSquare(square) {
+            if (!gameStarted || square.classList.contains('matched') || selectedSquares.length >= 2) return;
+
+            square.style.backgroundColor = square.dataset.color; // Reveal the color
+
+            selectedSquares.push(square);
+
+            if (selectedSquares.length === 2) {
+                const [firstSquare, secondSquare] = selectedSquares;
+
+                if (firstSquare.dataset.color === secondSquare.dataset.color) {
+                    // If the colors match, remove the squares immediately
+                    firstSquare.classList.add('matched');
+                    secondSquare.classList.add('matched');
+                    selectedSquares = [];
+                    setTimeout(() => {
+                        firstSquare.style.display = 'none';
+                        secondSquare.style.display = 'none';
+                        checkGameEnd();
+                    }, ); // Delay before squares disappear
+                } else {
+                    // If the colors don't match, hide them again and restart the game
+                    setTimeout(() => {
+                        firstSquare.style.backgroundColor = '';
+                        secondSquare.style.backgroundColor = '';
+                        selectedSquares = [];
+                        restartGame();
+                    }, ); // Delay before hiding squares
+                }
+            }
+        }
+
+        // Function to check if the game is ended
+        function checkGameEnd() {
+            if (document.querySelectorAll('.square:not(.matched)').length === 0) {
+                // All squares are matched
+                gameStarted = false;
+                message.textContent = 'You won! Play again?';
+                startButton.style.display = 'block';
+            }
+        }
+
+        // Function to restart the game
+        function restartGame() {
+            gameStarted = false;
+            message.textContent = 'Game over! Play again?';
+            startButton.style.display = 'block';
+        }
+
+        // Event listener for the start button
+        startButton.addEventListener('click', () => {
+            startButton.style.display = 'none';
+            message.textContent = 'Match the colors!';
+            gameStarted = true;
+
+            // Duplicate and shuffle the colors
+            shuffledColors = [...colors, ...colors];
+            shuffleArray(shuffledColors);
+
+            createGameBoard();
+        });
+
+        // Initial game setup
+        startButton.style.display = 'block';
+    </script>
+</body>
+</html>
+

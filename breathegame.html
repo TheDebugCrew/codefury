@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breathing Exercise</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#breathingBox {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 4s;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+        /* ... Your existing CSS styles ... */
+
+        #timer {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Breathing Exercise</h1>
+        <div id="breathingBox">
+            <div class="circle" id="circle"></div>
+        </div>
+        <button id="startBtn">Start</button>
+        <div id="timer"></div> <!-- Add a div for the timer -->
+    </div>
+    <script>
+        const circle = document.getElementById('circle');
+        const startBtn = document.getElementById('startBtn');
+        const timer = document.getElementById('timer'); // Get the timer element
+        let inhale = true; // Track inhale/exhale phase
+
+        let animationInterval; // Variable to store the animation interval
+
+        startBtn.addEventListener('click', () => {
+            startBreathing();
+        });
+
+        function startBreathing() {
+            startBtn.disabled = true;
+            animateBreathing();
+            animationInterval = setInterval(animateBreathing, 8000); // Start the animation loop
+        }
+
+        function animateBreathing() {
+            circle.style.transform = 'scale(1.2)';
+            timer.innerText = inhale ? 'Inhale' : 'Exhale'; // Set timer text for inhale/exhale
+            inhale = !inhale; // Toggle inhale/exhale phase
+
+            setTimeout(() => {
+                circle.style.transform = 'scale(1)';
+            }, 4000); // 4 seconds for each inhale/exhale phase
+        }
+    </script>
+</body>
+</html>
