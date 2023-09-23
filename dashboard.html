@@ -36,7 +36,12 @@ main div p{
 h2{
   -webkit-text-stroke: 0.4px white;
 }
-
+.logout a{
+  color: white;
+}
+.logout a:hover{
+  color: blue;
+}
 .logout{
   background-color: var(--dark-blue);
   color: white;
@@ -90,8 +95,7 @@ h2{
         <main>
             <div>
                 <h1>Welcome to Your Mental Debug Dashboard</h1>
-                <p>Hello, <span id="user-email"></span>!</p>
-                 
+                <button class="logout" id="profile"><a href="/profile.html">My Journal</a></button>                 
             </div>
             <div class="activities">
 
