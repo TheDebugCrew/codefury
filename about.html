@@ -120,7 +120,43 @@ b,h2{
   -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.248);
 }
 
-
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  /* Hide the navigation menu by default */
+  .navbar {
+      display: none;
+  }
+  
+  /* Show the hamburger button */
+  .hamburger {
+      display: block;
+  }
+  
+  /* Rotate the hamburger bars to form an 'X' when menu is open */
+  .hamburger.active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Display the navigation menu when the hamburger button is active */
+  .navbar.active {
+      display: block;
+  }
+  
+  /* Style the navigation menu for mobile screens */
+  .navbar.active ul {
+      flex-direction: column;
+      align-items: center;
+  }
+  .navbar.active li {
+      padding: 1em 0;
+  }
+}
     </style>
 </head>
 <body>
