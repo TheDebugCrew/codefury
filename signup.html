@@ -214,7 +214,7 @@ label{
 		    // Signed in 
 		    const user = userCredential.user;
 		    console.log(user);
-		    alert("Registration successfully!!");
+		    alert("Registration successful!!,Please Login Now");
 		    // ...
 		  })
 		  .catch((error) => {
@@ -240,6 +240,8 @@ label{
 		    alert(user.email+" Login successfully!!!");
 		    document.getElementById('logout').style.display = 'block';
 		    // ...
+        window.location.href = "/dashboard.html"; // Replace with the actual URL of your dashboard page
+
 		  })
 		  .catch((error) => {
 		    const errorCode = error.code;
