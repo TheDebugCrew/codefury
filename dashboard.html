@@ -87,7 +87,7 @@ h2{
         <main>
             <div>
                 <h1>Welcome to Your Mental Debug Dashboard</h1>
-                <p>Hello, <span id="user-display-name"></span>!</p>
+                <p>Hello, <span id="user-email"></span>!</p>
                  
             </div>
             <div class="activities">
@@ -131,10 +131,10 @@ h2{
         </div>
       </div>
   </footer>
+  
 </body>
 
 <script>
-
   // Check if the user is authenticated
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -167,6 +167,8 @@ function displayUserData(userData) {
   // Use userData to update the content of your dashboard elements
   // For example, update profile information, display user's posts, etc.
   // You can access specific fields like userData.name, userData.email, etc.
+  document.getElementById("user-name").textContent = userData.name;
+  document.getElementById("user-email").textContent = userData.email;
 }
 
 </script>
