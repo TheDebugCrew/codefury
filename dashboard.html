@@ -95,7 +95,7 @@ h2{
         <main>
             <div>
                 <h1>Welcome to Your Mental Debug Dashboard</h1>
-                <button class="logout" id="profile"><a href="/profile.html">My Journal</a></button>                 
+                <button class="logout" id="profile"><a href="/journal.html">My Journal</a></button>                 
             </div>
             <div class="activities">
 
@@ -218,7 +218,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         const user = userCredential.user;
         console.log(user);
         alert(user.email + " Login successfully!!!");
-        window.location.href = "/profile.html"; 
+        window.location.href = "/journal.html"; 
         // ...
       })
       .catch((error) => {
