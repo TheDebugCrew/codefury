@@ -68,7 +68,12 @@ To run this project locally, follow these steps:
 
 ## Contributors
 
-- Contra (GitHub: [@contra-debug](https://github.com/contra-debug))
+- Sai Uttej R (GitHub: [@Sai-Uttej-R](https://github.com/Sai-Uttej-R)) 
+- R Supradeep (GitHub: [@Supradeep-R](https://github.com/Supradeep-R))
+- Saketh Valakatla (GitHub: [@sakethvalakatla](https://github.com/sakethvalakatla)) 
+- Akshay Rairao (GitHub: [@a-r-04](https://github.com/a-r-04)) 
+
+
 - [Team Member 2 Name]
 - [Team Member 3 Name]
 - [Team Member 4 Name]
@@ -78,15 +83,6 @@ To run this project locally, follow these steps:
 - We'd like to express our gratitude to the CodeFury 6.0 Hackathon organizers for providing us with this opportunity to create a project with a positive impact on mental health.
 - Special thanks to the Quotable API and Spotify for their valuable contributions to our project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 Thank you for checking out Debug Mental Health! We hope our platform helps you and others on their journey to better mental well-being.
-```
-
-Don't forget to replace `[Team Member X Name]` with the actual names of your team members and `[link-to-your-logo.png]` with the link to your project logo.
-
-Feel free to customize and expand this README as needed to provide more details about your project. If you have any questions or need further assistance, just let me know, bro! 🚀📝
