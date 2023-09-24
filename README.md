@@ -73,11 +73,6 @@ To run this project locally, follow these steps:
 - Saketh Valakatla (GitHub: [@sakethvalakatla](https://github.com/sakethvalakatla)) 
 - Akshay Rairao (GitHub: [@a-r-04](https://github.com/a-r-04)) 
 
-
-- [Team Member 2 Name]
-- [Team Member 3 Name]
-- [Team Member 4 Name]
-
 ## Acknowledgments
 
 - We'd like to express our gratitude to the CodeFury 6.0 Hackathon organizers for providing us with this opportunity to create a project with a positive impact on mental health.
