@@ -71,11 +71,11 @@ To run this project locally, follow these steps:
 - Sai Uttej R (GitHub: [@Sai-Uttej-R](https://github.com/Sai-Uttej-R)) 
 - R Supradeep (GitHub: [@Supradeep-R](https://github.com/Supradeep-R))
 - Saketh Valakatla (GitHub: [@sakethvalakatla](https://github.com/sakethvalakatla)) 
-- Akshay Rairao (GitHub: [@a-r-04](https://github.com/a-r-04)) 
+- Akshay Rairao (GitHub: [@a-r-04](https://github.com/a-r-04))
+- PavanKumarSadhanaveni (GitHub:[@PavanKumarSadhanaveni](https://github.com/PavanKumarSadhanaveni))
 
 ## Acknowledgments
 
-- We'd like to express our gratitude to the CodeFury 6.0 Hackathon organizers for providing us with this opportunity to create a project with a positive impact on mental health.
 - Special thanks to the Quotable API and Spotify for their valuable contributions to our project.
 
 ---
