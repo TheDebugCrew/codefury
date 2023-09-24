@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up | Debug Mental Health by TDC</title>
-  <link rel="shortcut icon" href="/assets/Images/favicon-png.png" type="image/x-icon">
-
   <link rel="stylesheet" href="css/style.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -100,7 +98,7 @@ h3{
       <div class="navbar">
         <ul>
           <li>
-            <a href="index.html" id="home" >Home</a> 
+            <a href="index.html" id="home" style="color: var(--gold);">Home</a> 
           </li>
 
           <li>
@@ -108,14 +106,14 @@ h3{
           </li>
 
           <li>
-            <a href="audio.html" id="ss">Relax</a>
+            <a href="game.html" id="ss">Game</a>
           </li>
 
           <li>
-            <a href="help.html" id="ct">Support</a>
+            <a href="help.html" id="ct">Help</a>
           </li>
           <li>
-            <a href="awareness.html">Awareness</a>
+            <a href="awareness.html">More Awareness</a>
           </li>
           
         </ul>
@@ -285,7 +283,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        //alert(user.email + " Login successfully!!!");
+        alert(user.email + " Login successfully!!!");
         window.location.href = "/dashboard.html"; 
 
         //document.getElementById('logout').style.display = 'block';
@@ -317,3 +315,119 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 </html>
 
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration and Login Form</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .col-sm-4 {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        /* Form styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Image styles */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .col-sm-4 {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">	
+        <form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password">
+                    </div>
+                    <button type="button" id="register" name="register" class="btn btn-success">Register Now</button>
+                </div>
+              </form>
+              <div class="col-sm-4">
+                  <img src="firebase_auth.png" alt="We (The Debug Crew) used Firebase">
+              </div>
+              <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
+                  <div class="col-sm-4">
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" name="login_password" id="login_password" class="form-control" placeholder="Enter your password">
+                      </div>
+                      <button type="button" id="login" name="login" class="btn btn-success">Login</button>
+                  </div>
+              </form>
+              <button type="button" id="logout" name="logout" class="btn">Logout</button>
+          </div>	
+      </div>
+  </body>
+  </html>
+  -->
