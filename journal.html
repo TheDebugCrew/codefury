@@ -62,12 +62,12 @@
             <label class="" for="bio"></label>
             <textarea name="bio" id="bio" required placeholder="Tell us how your day is..."></textarea>
       
-            <label for="job">My Mood Rightnow</label>
-            <select name="job" id="job" required>
-              <optgroup label="Web">
-                <option value="front_end_developer">Happy</option>
-                <option value="back_end_developer">Sad</option>
-                <option value="fullstack_developer">Angry</option>
+            <label for="mood">My Mood Rightnow</label>
+            <select name="mood" id="mood" required>
+              <optgroup label="Mood">
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+                <option value="Angry">Angry</option>
               </optgroup>
               <!--<optgroup label="Mobile">
                 <option value="android">Android</option>
@@ -137,23 +137,24 @@
       let name = document.querySelector('#name').value;
       let email = document.querySelector('#email').value;
       let bio = document.querySelector('#bio').value;
-      let job = document.querySelector('#job').value;
+      let mood = document.querySelector('#mood').value;
       //send message values(3)
-      sendMessage(name, email, bio, job);
+      sendMessage(name, email, bio, mood);
     }
 
     //Send Message to Firebase(4)
-    function sendMessage(name, email, bio, job) {
+    function sendMessage(name, email, bio, mood) {
       const database = getDatabase();
 
       set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
         name: name,
         email: email,
         bio: bio,
-        job: job,
+        mood: mood,
       }).then(() => {
           //Show Alert Message(5)
           alert("Journal has been submitted!!");
+          alert("Click on View Journals to see community");
        document.querySelector('.alert').style.display = 'block';
         //Hide Alert Message After Seven Seconds(6)
        setTimeout(function () {
