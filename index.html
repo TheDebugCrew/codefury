@@ -11,10 +11,13 @@
 <body>
     <header>
       <nav>
-        
-        <a href="index.html" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+        <div class="nav-img">
 
-        <div class="navbar">
+          
+          <a href="index.html" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt="" id="nav-img" ></a>
+          
+        </div>
+        <div class="navbar" id="nav-bar" >
           <ul>
             <li style="color: var(--gold-color);">
               <a href="index.html" id="home" >Home</a> 
@@ -35,6 +38,13 @@
               <a href="awareness.html">Awareness</a>
             </li>
 
+            <li>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+
+          </ul>
             <!-- Add this code within the <header> element -->
 <!-- <button class="hamburger" id="hamburger-btn">
   <div class="bar">.</div>
@@ -43,7 +53,8 @@
 </button> -->
 
             
-          </ul>
+
+
         </nav>
         </div>
       </header>
@@ -96,5 +107,8 @@
       });
   </script> -->
   
+  <script src="responsiveNav.js">
+
+    </script>
 </body>
 </html>
