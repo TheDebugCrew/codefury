@@ -2,7 +2,7 @@
 
 ## Team: The Debug Crew
 
-![Debug Mental Health Logo](link-to-your-logo.png)
+![Debug Mental Health Logo](assets\Images\logo-png-dbc.png)
 
 ## Introduction
 
