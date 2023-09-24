@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help</title>
+    <link rel="shortcut icon" href="/assets/Images/favicon-png.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -83,6 +84,28 @@
                 overflow: hidden;
                 transition: all 1s;
             }
+            .container{
+                text-align: center;
+            }
+            .container #view{
+                background-color: var(--dark-blue);
+            color: white;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            border-radius: 2em;
+            border: none;
+            transition: all 1s ease;
+            margin-bottom: 4em;
+            }
+            .container #view:hover{
+                
+  background-color: var(--gold-color);
+  box-shadow: 0 0 30px var(--gold-color);
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
 
             #up {
                 display: none; 
@@ -156,6 +179,8 @@
     </div>
     <div class="main">
     <div class="container">
+        <h2>Community</h2>
+        <button class="logout" id="view"><a href="/view.html">View Journals</a></button>                                  
         <h2>FAQs</h2>
         <div class="wrapper">
             <button class="qsn">
