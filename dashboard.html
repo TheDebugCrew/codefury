@@ -172,9 +172,7 @@ h2{
   const analytics = getAnalytics(app);
   const auth = getAuth();
   console.log(app);
-
-
-/*
+  
   // Check if the user is already logged in
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -182,53 +180,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.location.href = "dashboard.html"; // Replace with your actual dashboard page URL
   }
 });
-*/
-
-  //----- New Registration code start	  
-  document.getElementById("register").addEventListener("click", function () {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    //For new registration
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        console.log(user);
-        alert("Registration successful!!,Please Login Now.");
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        console.log(errorMessage);
-        alert(error);
-      });
-  });
-  //----- End
-
-  //----- Login code start	  
-  document.getElementById("login").addEventListener("click", function () {
-    var email = document.getElementById("login_email").value;
-    var password = document.getElementById("login_password").value;
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        console.log(user);
-        alert(user.email + " Login successfully!!!");
-        window.location.href = "/journal.html"; 
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        alert(errorMessage);
-      });
-  });
-  //----- End
 
   //----- Logout code start	  
   document.getElementById("logout").addEventListener("click", function () {
