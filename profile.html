@@ -1,126 +1,182 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css" />
-  <title>profile</title>
-</head>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-  <form action="" method="POST" id="registrationform">
-    <h1>Register</h1>
-    <div class="alert">Form Submitted Successfully</div>
-
-    <!-- Section 1 -->
-    <fieldset>
-      <legend><span class="section">1</span>Your Basic Info</legend>
-      <label class="" for="name">Name:</label>
-      <input type="text" name="name" value="" id="name" required />
-
-      <label class="" for="email">Email:</label>
-      <input type="email" name="email" value="" id="email" required />
-
-      <label for="password">password:</label>
-      <input type="password" name="password" value="" id="password" required />
-    </fieldset>
-
-    <!-- section 2 -->
-    <fieldset>
-      <legend><span class="section">2</span>Profile</legend>
-      <label class="" for="bio">Bio:</label>
-      <textarea name="bio" id="bio" required></textarea>
-
-      <label for="job">Job Role:</label>
-      <select name="job" id="job" required>
-        <optgroup label="Web">
-          <option value="front_end_developer">Frontend Developer</option>
-          <option value="back_end_developer">Backend Developer</option>
-          <option value="fullstack_developer">Fullstack Developer</option>
-        </optgroup>
-        <optgroup label="Mobile">
-          <option value="android">Android</option>
-          <option value="ionic">Ionic</option>
-          <option value="phonegap">PhoneGap</option>
-        </optgroup>
-      </select>
-      <br /><br />
-      <label>Interest:</label>
-
-      <select id="interest" required>
-        <option value="development">Development</option>
-        <option value="design">Design</option>
-        <option value="business">Business</option>
-      </select>
-
-      <button type="submit" sendMessage()>Register</button>
-  </form>
-
-   <script type="module">
-
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-
-    const firebaseConfig = {
-    apiKey: "AIzaSyBgmXZu34LnRagXsXzgBYob42Zrgn1mPc4",
-    authDomain: "tdc-debugmentalhealth.firebaseapp.com",
-    databaseURL: "https://tdc-debugmentalhealth-default-rtdb.firebaseio.com",
-    projectId: "tdc-debugmentalhealth",
-    storageBucket: "tdc-debugmentalhealth.appspot.com",
-    messagingSenderId: "515876331617",
-    appId: "1:515876331617:web:85398a08ffa6587b020a20",
-    measurementId: "G-87DWHB8XQJ"
-  };
-
-      // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-
-
-
-    //listen for submit event//(1)
-    document
-      .getElementById('registrationform')
-      .addEventListener('submit', formSubmit);
-
-    //Submit form(2)
-    function formSubmit(e) {
-      e.preventDefault();
-      // Get Values from the DOM
-      let name = document.querySelector('#name').value;
-      let email = document.querySelector('#email').value;
-      let password = document.querySelector('#password').value;
-      let bio = document.querySelector('#bio').value;
-      let job = document.querySelector('#job').value;
-      let interest = document.querySelector('#interest').value;
-
-      //send message values(3)
-      sendMessage(name, email, password, bio, job, interest);
-    }
-
-    //Send Message to Firebase(4)
-    function sendMessage(name, email, password, bio, job, interest) {
-      const database = getDatabase();
-
-      set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
-        name: name,
-        email: email,
-        password: password,
-        bio: bio,
-        job: job,
-        Interest: interest
-      }).then(() => {
-          //Show Alert Message(5)
-       document.querySelector('.alert').style.display = 'block';
-        //Hide Alert Message After Seven Seconds(6)
-       setTimeout(function () {
-       document.querySelector('.alert').style.display = 'none';
-       }, 7000);
-       document.getElementById('registrationform').reset();
-      }).catch((error) => {
-        alert(error)
-      })
-    }
-  </script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>profile</title>
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        
+        <a href="index.html" id="head1" class="dmh"><img src="assets/Images/logo-png.png" alt=""></a>
+  
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="index.html" id="home" >Home</a> 
+            </li>
+  
+            <li>
+              <a href="about.html" id="al">About</a>
+            </li>
+  
+            <li>
+              <a href="audio.html" id="ss">Relax</a>
+            </li>
+  
+            <li>
+              <a href="help.html" id="ct">Support</a>
+            </li>
+            <li>
+              <a href="awareness.html">Awareness</a>
+            </li>
+            
+          </ul>
+        </nav>
+        </div>
+      </header>
+      <main>
+  
+        <form action="" method="POST" id="registrationform">
+          <h1>Register</h1>
+          <div class="alert">Form Submitted Successfully</div>
+      
+          <!-- Section 1 -->
+          <fieldset>
+            <legend><span class="section">1</span>Your Basic Info</legend>
+            <label class="" for="name">Name:</label>
+            <input type="text" name="name" value="" id="name" required />
+      
+            <label class="" for="email">Email:</label>
+            <input type="email" name="email" value="" id="email" required />
+      
+            <label for="password">password:</label>
+            <input type="password" name="password" value="" id="password" required />
+          </fieldset>
+      
+          <!-- section 2 -->
+          <fieldset>
+            <legend><span class="section">2</span>Profile</legend>
+            <label class="" for="bio">Bio:</label>
+            <textarea name="bio" id="bio" required></textarea>
+      
+            <label for="job">Job Role:</label>
+            <select name="job" id="job" required>
+              <optgroup label="Web">
+                <option value="front_end_developer">Frontend Developer</option>
+                <option value="back_end_developer">Backend Developer</option>
+                <option value="fullstack_developer">Fullstack Developer</option>
+              </optgroup>
+              <optgroup label="Mobile">
+                <option value="android">Android</option>
+                <option value="ionic">Ionic</option>
+                <option value="phonegap">PhoneGap</option>
+              </optgroup>
+            </select>
+            <br /><br />
+            <label>Interest:</label>
+      
+            <select id="interest" required>
+              <option value="development">Development</option>
+              <option value="design">Design</option>
+              <option value="business">Business</option>
+            </select>
+      
+            <button type="submit" sendMessage()>Register</button>
+        </form>
+      </main>
+      <footer>
+        <p>&copy; 2023 Debug Mental Health</p>
+        <div>
+          <h4>Connect with creators</h4>
+          <div class="creaters">
+            <a href="https://www.linkedin.com/in/supradeep-revuru/" target="_blank">
+              Supradeep R
+            </a>
+            <a href="https://www.linkedin.com/in/sai-uttej-r/" target="_blank">
+              SaiUttej R
+            </a>
+            <a href="https://www.linkedin.com/in/akshay-rairao/" target="_blank">
+              Akshay Rairao
+              
+            </a>
+            <a href="https://www.linkedin.com/in/saketh-valakatla-a9194122b/" target="_blank">
+              Saketh Valakatla
+            </a>
+          </div>
+        </div>
+    </footer>
+  
+     <script type="module">
+  
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  
+      const firebaseConfig = {
+      apiKey: "AIzaSyBgmXZu34LnRagXsXzgBYob42Zrgn1mPc4",
+      authDomain: "tdc-debugmentalhealth.firebaseapp.com",
+      databaseURL: "https://tdc-debugmentalhealth-default-rtdb.firebaseio.com",
+      projectId: "tdc-debugmentalhealth",
+      storageBucket: "tdc-debugmentalhealth.appspot.com",
+      messagingSenderId: "515876331617",
+      appId: "1:515876331617:web:85398a08ffa6587b020a20",
+      measurementId: "G-87DWHB8XQJ"
+    };
+  
+        // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+  
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+  
+  
+  
+      //listen for submit event//(1)
+      document
+        .getElementById('registrationform')
+        .addEventListener('submit', formSubmit);
+  
+      //Submit form(2)
+      function formSubmit(e) {
+        e.preventDefault();
+        // Get Values from the DOM
+        let name = document.querySelector('#name').value;
+        let email = document.querySelector('#email').value;
+        let password = document.querySelector('#password').value;
+        let bio = document.querySelector('#bio').value;
+        let job = document.querySelector('#job').value;
+        let interest = document.querySelector('#interest').value;
+  
+        //send message values(3)
+        sendMessage(name, email, password, bio, job, interest);
+      }
+  
+      //Send Message to Firebase(4)
+      function sendMessage(name, email, password, bio, job, interest) {
+        const database = getDatabase();
+  
+        set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
+          name: name,
+          email: email,
+          password: password,
+          bio: bio,
+          job: job,
+          Interest: interest
+        }).then(() => {
+            //Show Alert Message(5)
+         document.querySelector('.alert').style.display = 'block';
+          //Hide Alert Message After Seven Seconds(6)
+         setTimeout(function () {
+         document.querySelector('.alert').style.display = 'none';
+         }, 7000);
+         document.getElementById('registrationform').reset();
+        }).catch((error) => {
+          alert(error)
+        })
+      }
+    </script>
+  </body>
 </html>
