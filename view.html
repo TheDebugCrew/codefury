@@ -124,14 +124,21 @@
         // Function to update likes in the database
         function updateLikes(journalKey) {
             const journalRef = ref(database, 'users/' + journalKey);
-            get(journalRef).then((snapshot) => {
-                const journal = snapshot.val();
-                const currentLikes = journal.likes || 0;
-                set(journalRef, {
-                    ...journal,
-                    likes: currentLikes + 1,
+            get(journalRef)
+                .then((snapshot) => {
+                    const journal = snapshot.val();
+                    const currentLikes = journal.likes || 0;
+                    const updatedLikes = currentLikes + 1;
+                    console.log('Current Likes:', currentLikes);
+                    console.log('Updated Likes:', updatedLikes);
+                    return set(journalRef, {
+                        ...journal,
+                        likes: updatedLikes,
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error updating likes:', error);
                 });
-            });
         }
 
         // Listen for changes in the database
@@ -170,53 +177,53 @@
         });
         
 */
-/*
-        // ...
-
-        // Function to display journals with like button and count
-        function displayJournals(journals) {
-            journalsContainer.innerHTML = ''; // Clear previous entries
-            for (const key in journals) {
-                if (Object.hasOwnProperty.call(journals, key)) {
-                    const journal = journals[key];
-                    const journalDiv = document.createElement('div');
-                    journalDiv.innerHTML = `
-                <h2>${journal.name}</h2>
-                <p>Email: ${journal.email}</p>
-                <p>Journal Entry: ${journal.bio}</p>
-                <p>Mood: ${journal.mood}</p>
-                <button class="like-button" data-key="${key}">Like</button>
-                <span class="like-count">${journal.likes || 0} Likes</span>
-            `;
-                    journalsContainer.appendChild(journalDiv);
+        /*
+                // ...
+        
+                // Function to display journals with like button and count
+                function displayJournals(journals) {
+                    journalsContainer.innerHTML = ''; // Clear previous entries
+                    for (const key in journals) {
+                        if (Object.hasOwnProperty.call(journals, key)) {
+                            const journal = journals[key];
+                            const journalDiv = document.createElement('div');
+                            journalDiv.innerHTML = `
+                        <h2>${journal.name}</h2>
+                        <p>Email: ${journal.email}</p>
+                        <p>Journal Entry: ${journal.bio}</p>
+                        <p>Mood: ${journal.mood}</p>
+                        <button class="like-button" data-key="${key}">Like</button>
+                        <span class="like-count">${journal.likes || 0} Likes</span>
+                    `;
+                            journalsContainer.appendChild(journalDiv);
+                        }
+                    }
+        
+                    // Add click event listeners to like buttons
+                    const likeButtons = document.querySelectorAll('.like-button');
+                    likeButtons.forEach((button) => {
+                        button.addEventListener('click', (e) => {
+                            const journalKey = e.target.getAttribute('data-key');
+                            updateLikes(journalKey);
+                        });
+                    });
                 }
-            }
-
-            // Add click event listeners to like buttons
-            const likeButtons = document.querySelectorAll('.like-button');
-            likeButtons.forEach((button) => {
-                button.addEventListener('click', (e) => {
-                    const journalKey = e.target.getAttribute('data-key');
-                    updateLikes(journalKey);
-                });
-            });
-        }
-
-        // Function to update likes in the database
-        function updateLikes(journalKey) {
-            const journalRef = ref(database, 'users/' + journalKey);
-            get(journalRef).then((snapshot) => {
-                const journal = snapshot.val();
-                const currentLikes = journal.likes || 0;
-                set(journalRef, {
-                    ...journal,
-                    likes: currentLikes + 1,
-                });
-            });
-        }
-
-        // ...
-*/
+        
+                // Function to update likes in the database
+                function updateLikes(journalKey) {
+                    const journalRef = ref(database, 'users/' + journalKey);
+                    get(journalRef).then((snapshot) => {
+                        const journal = snapshot.val();
+                        const currentLikes = journal.likes || 0;
+                        set(journalRef, {
+                            ...journal,
+                            likes: currentLikes + 1,
+                        });
+                    });
+                }
+        
+                // ...
+        */
 
     </script>
 </body>
