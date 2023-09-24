@@ -131,6 +131,8 @@ footer div a:hover{
   color: var(--gold-color);
 }
 
+
+/* hambuger */
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
   /* Hide the navigation menu by default */

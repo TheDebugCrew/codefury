@@ -5,7 +5,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/hAndfStyle.css">
+    <style>
+      main{
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      fieldset{
+        padding: 2em;
+      }
+      button{
+        background-color: var(--dark-blue);
+  color: white;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  border :none;
+  transition: all 1s ease;
+      }
+      button:hover{
+  background-color: var(--gold-color);
+  box-shadow: 0 0 30px var(--gold-color);
+      }
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    </style>
     <title>profile</title>
   </head>
   
@@ -51,17 +79,20 @@
             <legend><span class="section">1</span>Your Basic Info</legend>
             <label class="" for="name">Name:</label>
             <input type="text" name="name" value="" id="name" required />
-      
+            <br>
+
             <label class="" for="email">Email:</label>
             <input type="email" name="email" value="" id="email" required />
+            <br>
           </fieldset>
       
           <!-- section 2 -->
           <fieldset>
             <legend><span class="section"></span>Journal</legend>
             <label class="" for="bio"></label>
-            <textarea name="bio" id="bio" required placeholder="Tell us how your day is..."></textarea>
-      
+            <textarea name="bio" rows="6" cols="30" id="bio"  required placeholder="Tell us how your day is..."></textarea>
+            <br>
+
             <label for="mood">My Mood Rightnow</label>
             <select name="mood" id="mood" required>
               <optgroup label="Mood">
@@ -81,6 +112,7 @@
         </form>
         <button class="logout" id="view"><a href="/view.html">View Journals</a></button>                                  
     </main>
+
       <footer>
         <p>&copy; 2023 Debug Mental Health</p>
         <div>
