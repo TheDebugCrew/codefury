@@ -32,3 +32,12 @@ The `index.html` file is divided into three main sections:
 ## Running the Website
 
 To run our website, open the `index.html` file in a web browser. The website will then be displayed in the browser.
+
+
+## Features
+
+This website is responsive.
+It has a great user experience.
+It has many fun activities .
+It has many resources to gain mental peace.
+Many youtube videos , Spotify songs are linked to the website .
